@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'GTA Russian'; /* Название шрифта, которое вы будете использовать в CSS */
+  src: url('./fonts/GTA%20Russian.ttf') format('truetype'); /* Путь к шрифту с корректным кодированием пробела */
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('./fonts/gothampro.ttf') format('truetype');
+}
+.header-container {
+  width: 100%; /* Ширина 100% от видимой области окна */
+  height: 150px; /* Высота контейнера */
+  border: 2px solid #151515;
+  border-radius: 2px;
+  background-color: #151515;
+  box-shadow: 0 0 2px #a8a8a8;
+  box-sizing: border-box;
+  position: relative; /* Относительное позиционирование для дочерних элементов */
+}
+
+.logo {
+  width: 139px;
+  height: 112px;
+  position: absolute;
+  top: 19px;
+  left: 90px;
+}
+
+.second-logo {
+  width: 433px;
+  height: 44px;
+  position: absolute;
+  top: 53px;
+  left: 242px;
+  opacity: 1;
+}
+
+.SVG {
+  width: 60px;
+  height: 60px;
+  margin-right: 60px;
+  position: absolute;
+  top: 45px;
+  right: 0; /* Позиционируем справа */
+}
+/* Стили для контейнера */
+.Main {
+  position: relative; /* Нужно для правильного позиционирования псевдоэлементов */
+  width: 1920px;
+  height: 1080px;
+  background-image: url('./images/фон1.png'); /* Замените на путь к вашему изображению */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Main::before {
+  content: ''; /* Псевдоэлемент для наложения цвета */
+  position: absolute; /* Абсолютное позиционирование относительно родителя */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Белый цвет с 50% прозрачностью */
+  z-index: 0; /* Псевдоэлемент будет под текстом */
+}
+
+/* .Main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: -303px 83px 500px 10px #000000;
+    z-index: -1;
+    pointer-events: none;
+  } */
+in-page {
+  position: relative; /* Нужно для правильного отображения текста над псевдоэлементом */
+  z-index: 1; /* Текст будет поверх псевдоэлемента */
+}
+
+.about-us {
+  background-color: transparent;
+  width: 728px;
+  height: 271px;
+  position: absolute; /* Или другое значение, в зависимости от вашего макета */
+  top: 248px;
+  left: 120px;
+  color: #ffffff;
+
+  overflow: visible;
+}
+
+/* Стили для основного текста */
+.about-us p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 35.2px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0px 4px 14.7px #000000; /* Параметры тени */
+  margin: 0;
+}
+.span {
+  color: #8017ff;
+}
+.shadow-us {
+  position: absolute; /* Позволяет точно указать расположение элемента */
+  width: 1089px;
+  height: 784px;
+  top: 83px;
+  left: -303px;
+  box-shadow: rgba(0, 20, 0, 1); /* Устанавливает фон, если необходимо */
+}
+.modal-button {
+  position: absolute; /* Для точного позиционирования */
+  top: 575px;
+  left: 120px;
+  height: 84px; /* Фиксированная высота */
+  background-color: #8017ff;
+  color: #ffffff; /* Цвет текста */
+  border: none; /* Убираем стандартные границы */
+  border-radius: 5px; /* Скругление углов */
+  padding: 65px 72px; /* Паддинг: сверху и снизу 65px, слева и справа 72px */
+  box-shadow: 0 5px 50px rgba(81, 20, 146, 0.5); /* Тень */
+  cursor: pointer; /* Курсор руки при наведении */
+}
+
+.modal-button:hover {
+  background-color: #6d12b0; /* Цвет фона при наведении */
+  box-shadow:
+    0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.button-text {
+  width: 206px;
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+.advantages-title {
+  font-family: 'GTA Russian', sans-serif;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 76.03px;
+  color: #ffffff;
+  position: absolute;
+  top: 750px;
+  left: 659px;
+  width: 744px;
+  height: 90px;
+  text-shadow: 0px 4px 40px rgba(0, 0, 0, 1);
+}
+.arrow {
+  position: absolute;
+  width: 131px;
+  top: 844px;
+  left: 518px;
+}
+
+.advantages {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.container-advantage {
+  width: 604px;
+  height: 335px;
+  top: -1097px;
+  left: 133px;
+  gap: 0px;
+  opacity: 0px;
+  position: relative;
+}
+
+.icon1 {
+  width: 210px;
+  height: 179.69px;
+  margin-bottom: 20px;
+  box-shadow:
+    0px 4px 100px 0px rgba(206, 140, 0, 1),
+    /* Первая тень */ 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* Вторая тень */
+}
+
+.speedh h2 {
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px 0; /* Пример отступа между заголовком и текстом */
+}
+
+.speedp p {
+  font-family: 'Gotham Pro', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26.4px;
+  color: rgba(214, 214, 214, 1);
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
